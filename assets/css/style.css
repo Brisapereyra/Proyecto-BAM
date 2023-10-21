@@ -1,0 +1,492 @@
+*{ margin: 0; 
+   padding: 0;
+}
+
+
+/* logo */
+
+nav .logo{ 
+    display: flex;
+} 
+
+nav .logo img{ 
+    width: 40px;
+    height: 42px;
+    padding: 8px;
+}
+
+
+nav .logo h1{
+    font-family: 'Rock Salt', cursive;
+    font-size: 18px;
+    padding: 15px 0px;
+}
+
+
+
+/* navegador*/
+nav{ 
+    background-color: rgb(222, 214, 230) ;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+
+li{
+   display: inline-block ;
+   padding: 20px;
+}
+
+.lista li a{
+    text-decoration: none;
+    color: rgb(160, 21, 224);
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+
+
+
+
+/*texto principal*/
+.texto-inicio{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+}
+
+.vela{
+    width: 100%;
+    height: 600px;
+    opacity: 75%;
+    margin-left: 5px;
+    box-shadow: 61px 66px 57px -6px rgba(0,0,0,0.52);
+} 
+
+
+.foto-inicio{
+    position: relative;
+}
+
+    
+
+.foto-inicio p{
+    text-align: center;
+    position: absolute;
+    font-size: 25px;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    top: 10%;
+    width: 90%;
+    margin-left: 5%;
+}
+
+
+
+/*section gift card*/
+.regalo{
+    background-color: rgb(198, 155, 238);
+    background-position: center;
+    display: flex;
+    border-radius: 50px;
+    width: 75%;
+    height: 0%;
+    margin: 0px 150px;
+   
+}
+ 
+.regalo h3{
+    margin: 150px;
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+
+.regalo img{
+    width: 25%;
+    height: 320px;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(160, 21, 224);
+}
+
+
+/*footer*/
+footer{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+ 
+
+
+/*animación de iconos sacada de resors*/
+.icons{
+    margin-left: 600px;
+    display: flex;
+    column-gap: 20px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 26px;
+    color: #0c0c0c;
+    border-radius: 50%;
+    outline: 2px solid #0c0c0c ;
+    transition-property:
+        outline-offset, outline-color,
+        background-color;
+    transition-duration: .25s;
+}
+
+
+.icon:hover {
+    outline-offset: 4px;
+}
+
+.icon:hover i {
+    animation: shake .50s;
+}
+
+
+
+.icon--instagram:hover {
+    background-image: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285AEB 90%);
+    outline-color: #a02d76;
+}
+
+
+.icon--facebook:hover {
+    background-color: #3b5998;
+    outline-color: #3b5998;
+}
+
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
+}
+
+
+
+/*NOSOTROS CSS*/
+
+.piedras{
+    background-image: url(../imagenes/51QaiDX3SvL.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-bottom: 300px;
+}
+
+
+.nosotros h1{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Rock Salt', cursive;
+}
+
+
+.nosotros p{
+    text-align: center ;
+    font-size: 25px;
+    margin: 90px;
+    background-color: rgb(217, 235, 243);
+    opacity: 50%;
+}
+
+
+span{
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*SERVICIOS CSS*/
+
+.servicios{
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+
+.caja{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.articulo{
+    width: 400px;
+    height: 250px;
+    background-color:rgb(198, 155, 238);
+    border-radius: 25px;
+    box-shadow:  15px -15px 36px -7px rgba(0,0,0,0.41);
+    border-color: black;
+    border-style: solid;
+    margin: 25px;
+}
+
+
+.masaje{
+    width: 250px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 75px;
+}
+
+
+.articulo p{
+    margin-left: 20px;
+}
+
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/*TURNOS CSS*/
+
+.turnos{
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+}
+
+.calendario{
+    background-color: rgb(198, 155, 238);
+   width: 450px;
+    margin-left: 450px;
+    border-radius:  15px;
+    border-color:  black ;
+    border-style: solid ;
+    margin-bottom: 30px;
+    box-shadow:  15px -15px 36px -7px rgba(0,0,0,0.41);
+    
+}
+
+.mes{
+    text-align: center;
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+.botones{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.semana{
+    display: flex;
+    justify-content: space-evenly ;
+    font-size: 18px;
+    width: 400px;
+    margin-left: 20px;
+}
+
+.semana li{
+    margin: 0;
+    padding: 16px;
+}
+
+.dias{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr );
+    justify-items: right;
+    width: 410px;
+    margin-left: 10px;
+}
+
+.dia-uno{
+    grid-column-start: 7;
+}
+
+
+/*GIFT CARD CSS*/
+
+.gift-card{
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+
+.tarjetas{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarjeta{
+    width: 400px;
+    height: 250px;
+    background-color:rgb(198, 155, 238);
+    border-radius: 25px;
+    box-shadow:  15px -15px 36px -7px rgba(0,0,0,0.41);
+    border-color: black;
+    border-style: solid;
+    margin: 20px;
+}
+
+
+.tarjeta img{
+    width: 200px;
+    height: 150px;
+    margin-top:25px;
+    margin-left: 95px;
+}
+
+.tarjeta p{
+    text-align: center;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button{
+    height: 30px;
+    width: 80px;
+    margin-left: 160px;
+    border-radius: 7px;
+    font-weight: bold;
+    color: rgb(160, 21, 224);
+    border-color: rgb(160, 21, 224);
+    background-color: rgb(208, 120, 230);
+    cursor: pointer;
+}
+
+
+
+/*CONTACTO CSS*/
+
+.contacto{
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+    height: 300px;
+}
+
+form{
+    display: flex; 
+    justify-content: space-around;
+    flex-direction: column;
+    width: 270px;
+    height: 300px;
+    background-color: rgb(198, 155, 238);
+    padding: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 25px;
+    border-color: black;
+    border-style: solid;
+    box-shadow:  15px -15px 36px -7px rgba(0,0,0,0.41);
+    font-size: 20px;
+}
+
+input{
+    width: 265px;
+    height: 25px;
+}
+
+form button{
+    height: 50px;
+    width: 200px;
+    margin-top: 50px;
+    margin-left: 35px;
+    border-radius: 30px;
+}
+
+.enviar{
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(160, 21, 224);
+    border-color: rgb(160, 21, 224);
+    background-color: rgb(208, 120, 230);
+    cursor: pointer;
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media (min-width: 480px) 
+{nav{
+    background-color: rgb(214, 193, 233);
+    }
+}
+
+
+@media (min-width: 768px)
+{nav{
+    background-color: rgb(207, 176, 236);
+    }
+
+}
+
+@media (min-width: 1024px)
+{nav{
+    background-color: rgb(198, 155, 238) ;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
