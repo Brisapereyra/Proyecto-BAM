@@ -1,5 +1,7 @@
-*{ margin: 0; 
-   padding: 0;
+
+*{ 
+    margin: 0; 
+    padding: 0;
 }
 
 
@@ -14,7 +16,6 @@ nav .logo img{
     height: 42px;
     padding: 8px;
 }
-
 
 nav .logo h1{
     font-family: 'Rock Salt', cursive;
@@ -37,8 +38,8 @@ nav{
 
 
 li{
-   display: inline-block ;
-   padding: 20px;
+    display: inline-block ;
+    padding: 20px;
 }
 
 .lista li a{
@@ -46,9 +47,6 @@ li{
     color: rgb(160, 21, 224);
     font-family: 'Times New Roman', Times, serif;
 }
- 
-
-
 
 
 /*texto principal*/
@@ -59,20 +57,18 @@ li{
     font-weight: 600;
 }
 
-.vela{
-    width: 100%;
-    height: 600px;
-    opacity: 75%;
-    margin-left: 5px;
-    box-shadow: 61px 66px 57px -6px rgba(0,0,0,0.52);
-} 
-
-
 .foto-inicio{
     position: relative;
 }
 
-    
+.vela{
+    width: 95%;
+    height: 600px;
+    opacity: 75%;
+    margin-left: 25px;
+    box-shadow: 61px 66px 57px -6px rgba(0,0,0,0.52);
+} 
+
 
 .foto-inicio p{
     text-align: center;
@@ -87,6 +83,12 @@ li{
 
 
 
+.foto-inicio img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 2s;
+}
+
 /*section gift card*/
 .regalo{
     background-color: rgb(198, 155, 238);
@@ -95,15 +97,19 @@ li{
     border-radius: 50px;
     width: 75%;
     height: 0%;
-    margin: 0px 150px;
-   
+    margin: 0px 160px;
 }
- 
+
 .regalo h3{
     margin: 150px;
     font-size: 45px;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
+}
+
+.link{
+    text-decoration: none;
+    color: rgb(160, 21, 224);
 }
 
 
@@ -114,11 +120,10 @@ li{
     margin-top: 15px;
 }
 
-.link{
-    text-decoration: none;
-    color: rgb(160, 21, 224);
+.regalo:hover{
+    transform: scale(1.1);
+    transition: 3s;
 }
-
 
 /*footer*/
 footer{
@@ -126,10 +131,9 @@ footer{
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
- 
 
 
-/*animación de iconos sacada de resors*/
+/*animación de iconos para el footer sacada de resors*/
 .icons{
     margin-left: 600px;
     display: flex;
@@ -231,10 +235,6 @@ span{
 }
 
 
-
-
-
-
 /*SERVICIOS CSS*/
 
 .servicios{
@@ -245,42 +245,72 @@ span{
 }
 
 
-.caja{ 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.articulo{
-    width: 400px;
-    height: 250px;
-    background-color:rgb(198, 155, 238);
-    border-radius: 25px;
-    box-shadow:  15px -15px 36px -7px rgba(0,0,0,0.41);
-    border-color: black;
-    border-style: solid;
-    margin: 25px;
-}
-
-
-.masaje{
-    width: 250px;
-    height: 180px;
-    margin-top: 30px;
-    margin-left: 75px;
-}
-
-
-.articulo p{
-    margin-left: 20px;
-}
-
-
-.contenedor{
-    display: flex;
-    flex-wrap: wrap;
+.contenedor-cards{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    gap: 50px;
     justify-content: center;
+}
+
+/* animación de tarjetas usando resors*/
+.card {
+    width: 390px;
+    height: 290px;
+    perspective: 1000px;
+}
+
+.card-contenido {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    
+}
+
+.card:hover .card-contenido {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    /* Safari */
+    backface-visibility: hidden;
+    border-radius: 30px;
+    border-style: solid;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-front{
+    background-color:rgb(198, 155, 238);
+}
+.img-masaje{
+    width: 360px;
+    height: 270px;
+    border-radius: 20px;
+}
+
+.card-back {
+    background-color:rgb(198, 155, 238) ;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+
+.card-back p {
+    margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase; 
+    font-size: 18px;
 }
 
 
@@ -294,7 +324,7 @@ span{
 
 .calendario{
     background-color: rgb(198, 155, 238);
-   width: 450px;
+    width: 400px;
     margin-left: 450px;
     border-radius:  15px;
     border-color:  black ;
@@ -310,9 +340,20 @@ span{
     font-size: 25px;
 }
 
-.botones{
+.arrows{
     display: flex;
     justify-content: space-around;
+    margin-top: -25px;
+    color: rgb(76, 75, 78);
+    cursor: pointer;
+}
+
+.arrowleft:hover{
+    color: rgb(160, 21, 224);
+}
+
+.arrowright:hover{
+    color: rgb(160, 21, 224);
 }
 
 
@@ -320,27 +361,51 @@ span{
     display: flex;
     justify-content: space-evenly ;
     font-size: 18px;
-    width: 400px;
+    width: 350px;
     margin-left: 20px;
+    margin-top: 15px;
 }
 
 .semana li{
     margin: 0;
-    padding: 16px;
+    padding: 15px;
 }
 
 .dias{
     display: grid;
-    grid-template-columns: repeat(7, 1fr );
+    grid-template-columns: repeat(7,1fr);
     justify-items: right;
-    width: 410px;
-    margin-left: 10px;
+    width: 350px;
+    margin-left: 15px;
+    padding-bottom: 15px;
+    cursor: pointer; 
 }
 
-.dia-uno{
-    grid-column-start: 7;
+.dias li{
+    padding: 12px;
+    position: relative;
+    z-index: 1;
 }
 
+.desactivado{
+    color: rgb(141, 133, 145);
+}
+
+.dias li::before{
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.dias li:hover::before{
+    background-color:rgb(213, 200, 219);
+}
 
 /*GIFT CARD CSS*/
 
@@ -375,6 +440,7 @@ span{
     height: 150px;
     margin-top:25px;
     margin-left: 95px;
+    border-radius: 10px;
 }
 
 .tarjeta p{
@@ -438,6 +504,8 @@ input{
     height: 25px;
 }
 
+
+
 form button{
     height: 50px;
     width: 200px;
@@ -456,16 +524,13 @@ form button{
 }
 
 
-
 /* RESPONSIVE */
-
 
 @media (min-width: 480px) 
 {nav{
     background-color: rgb(214, 193, 233);
     }
 }
-
 
 @media (min-width: 768px)
 {nav{

@@ -34,25 +34,29 @@
 </header>
 
 <body>
-    <h1 class="contacto">
-        Contacto
-    </h1>
-     
-    <div class="formulario">
-    <form action="">
-        <label for="nombre"> Nombre: </label>
-        <input type="text" name="nombre" id="tu nombre">
-        
-        <label for="mail"> Mail: </label>
-        <input type="text" name="mail" id="tu mail">
-        
-        <label for="mensaje"> Mensaje: </label>
-        <textarea name="mensaje" id="tu mensaje" cols="30" rows="10" placeholder="escribi tu mensaje"> Escribí tu mensaje</textarea>
+  <h1 class="contacto"> Contacto</h1>
 
-        <button class="enviar" type="submit"> Enviar </button>
+  <div class="formulario">
+    <form id="contact" name="contact" accept-charset="UTF-8" action="https://formspree.io/f/xgejbvgp" method="post">
+    
+      <label for="nombre"> Nombre: </label>
+      <input type="text" name="nombre" id="tu nombre">
+        
+      <label for="mail"> Mail*: </label>
+      <input type="mail" name="mail" id="obligatorio" required>
+
+      <label for="dni"> DNI:</label>
+      <input type="number" name="dni" id="tu dni" pattern="[0-9]{8}">
+        
+      <label for="mensaje"> Mensaje*: </label>
+      <textarea name="mensaje" id="obligatorio" cols="30" rows="10" placeholder="Escribí tu mensaje" maxlength="150" required></textarea>
+
+      <button class="enviar" type="submit" id="submit"> Enviar </button>
     </form>
-    </div>
+  </div>
 
-
+  <script src="../javascript/contacto.js"></script>
+  <!--vinculación con sweet alert-->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
